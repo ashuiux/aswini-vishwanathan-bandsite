@@ -1,0 +1,69 @@
+
+$tablet-breakpoint: 768px;
+//TABLET (12 COL) - SCREEN SIZES BETWEEN 768PX - 1279PX
+$desktop-breakpoint: 1028px;
+//MOBILE (6 COL) - SCREEN SIZES BELOW 767PX
+
+//typeface
+$font-family: 'Avenir Next', sans-serif;
+$font-weight-regular: 400;
+$font-weight-demi: 600;
+$font-weight-bold: 700;
+
+//fontsizes desktop & tablet
+$page-header-font-size: 3.75rem;
+$page-header-line-height: 4.25rem;
+$section-header-font-size: 44px;
+$section-header-line-height: 44px;
+$subheader-font-size: 1.5rem;
+$subheader-line-height: 32px;
+$body-font-size: .875rem;
+$body-line-height: 22px;
+$footer-font-size: .75rem;
+$footer-line-height: 18px;
+$label-button-font-size: .75rem;
+$label-button-line-height: 20px;
+
+
+//fontsizes mobile
+$mobile-page-header-font-size: 3.75rem; //size increased too small compared
+$mobile-page-header-line-height: 32px;
+$mobile-section-header-font-size: 1.5rem;
+$mobile-section-header-line-height:  32px;
+$mobile-subheader-font-size: .875rem;
+$mobile-subheader-line-height: 22px;
+$mobile-body-font-size: .8125rem;
+$mobile-body-line-height: 1.125rem;
+$mobile-footer-font-size: 1rem;
+$mobile-footer-line-height: 18px;
+$mobile-label-button-font-size: .625rem;
+$mobile-label-button-line-height: 20px;
+
+
+
+//colors
+$primary-color-black: #323232;
+$primary-color-white: #FFFFFF;
+$secondary-color-silver: #AFAFAF;
+$secondary-color-mercury: #E1E1E1; 
+$secondary-color-alabaster: #FAFAFA; 
+$cta-hover-color: #000000;
+
+
+//padding
+$padding-xl: 80px;
+$padding-lg: 64px;
+$padding-m: 48px;
+$padding-s: 24px;
+$padding-xs: 16px;
+$padding-xxs: 8px;
+
+
+
+//margins
+$margin-mobile-body: 1rem;
+$tablet-body-margin: 2.25rem;
+$desktop-margin: auto;
+
+
+

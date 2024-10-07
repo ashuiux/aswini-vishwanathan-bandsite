@@ -1,0 +1,89 @@
+@use "variables" as *;
+
+@mixin tablet {
+  @media screen and (min-width: $tablet-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin mobile-page-header {
+  font-size: $mobile-page-header-font-size;
+  line-height: $mobile-page-header-line-height;
+  font-weight: $font-weight-bold;
+}
+
+@mixin mobile-section-header {
+  font-size: $mobile-section-header-font-size;
+  line-height: $mobile-section-header-line-height;
+  font-weight: $font-weight-bold;
+}
+
+@mixin mobile-subheader {
+  font-size: $mobile-subheader-font-size;
+  line-height: $mobile-subheader-line-height;
+  font-weight: $font-weight-demi;
+  padding-top: $padding-s;
+  padding-bottom: $padding-xs;
+}
+
+@mixin mobile-body {
+  font-size: $mobile-body-font-size;
+  line-height: $mobile-body-line-height;
+  font-weight: $font-weight-regular;
+}
+
+@mixin mobile-footer {
+  font-size: $mobile-footer-font-size;
+  line-height: $mobile-footer-line-height;
+  font-weight: $font-weight-regular;
+}
+
+@mixin mobile-button-label {
+  font-size: $mobile-button-label-font-size;
+  line-height: $mobile-button-label-line-height;
+  font-weight: $font-weight-bold;
+}
+
+@mixin page-header {
+  font-size: $page-header-font-size;
+  line-height: $page-header-line-height;
+  font-weight: $font-weight-bold;
+}
+
+@mixin section-header {
+  font-size: $section-header-font-size;
+  line-height: $section-header-line-height;
+  font-weight: $font-weight-bold;
+}
+
+@mixin subheader {
+  font-size: $subheader-font-size;
+  line-height: $subheader-line-height;
+  font-weight: $font-weight-demi;
+}
+
+@mixin body {
+  font-size: $body-font-size;
+  line-height: $body-line-height;
+  font-weight: $font-weight-regular;
+}
+
+@mixin footer {
+  font-size: $footer-font-size;
+  line-height: $footer-line-height;
+  font-weight: $font-weight-regular; 
+}
+
+@mixin button-label {
+  font-size: $button-label-font-size;
+  line-height: $button-label-line-height;
+  font-weight: $font-weight-bold;
+}
+
+

@@ -4,30 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Band Site</title>
-    <link rel="stylesheet" href="/styles/bio.css" />
+    <link rel="stylesheet" href="styles/bio.css" />
   </head>
   <body>
-    <nav>
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">Biography</a>
+    <header class="header">      
+       <img class="header__logo" src="assets/Logo/Logo-bandsite.svg" alt="bandsite-logo" >
+    
+    <nav class="header__nav">
+      <ul class="header__nav__list">
+        <li class="header__nav__list__item">
+          <a class="header__nav__list__item__link" href="index.html">Biography</a>
         </li>
-        <li class="nav__item">
-          <a class="nav__link" href="index.html">Shows</a>
+        <li class="header__nav__list__item">
+          <a class="header__nav__list__item__link" href="shows.html">Shows</a>
         </li>
       </ul>
     </nav>
+  </header>
+
     <main class="hero">
       <h1 class="hero__title">The Bees Knees</h1>
-      <img
-        src="/assets/Images/hero-bio.jpg"
-        alt="hero-bio"
-        class="about__img"
-      />
+
     </main>
     <section class="about">
       <h1 class="about__title">About the Musicians</h1>
-      <img src="/assets/Images/band.jpg" alt="hero-bio" class="about__img" />
+      <img
+        class="about__img"
+        src="assets/Images/band.jpg"
+        alt="hero-bio"
+        class="about__img"
+      />
       <q class="about__quote"
         >We push each other to be the best. It’s not uncommon for one of us to
         say ‘this needs to be better, back to the drawing board’” <br />
@@ -35,6 +41,7 @@
       </q>
       <h2 class="about__subtitle">The Bees Knees</h2>
       <p class="about__copy">
+        <span class="about__copy__para">
         The Bees Knees is a pop rock band originating from San Francisco,
         California. The band consists a dynamic lineup featuring two lead
         vocalists, two guitarists, a bassist, a keyboardist and a drummer. The
@@ -43,7 +50,9 @@
         with both new and seasoned acts, the manager was confident the band
         could succeed even further with more support, pushing The Bees Knees to
         sign with a well known record label.
-        <br />
+      </span>
+    
+      <span class="about__copy__para">
         From there, the band has soared, gaining international recognition and
         ranking in the top 10 on the Poster Charts. New fans immediately fell in
         love with the band’s original and organic attitude, solidifying their
@@ -52,119 +61,127 @@
         drawn to their candid and authentic performances on stage. The Bees
         Knees are currently recording their second studio album, looking to be
         released in early 2024.
+      </span>
       </p>
     </section>
     <section class="photo-gallery">
       <h1 class="photo-gallery__title">Photo Gallery</h1>
       <article class="photo-gallery__images">
         <img
-          src="/assets/Images/Photo-gallery-1.jpg"
+          src="assets/Images/Photo-gallery-1.jpg"
           alt="Photo-gallery-1"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-2.jpg"
+          src="assets/Images/Photo-gallery-2.jpg"
           alt="Photo-gallery-2"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-3.jpg"
+          src="assets/Images/Photo-gallery-3.jpg"
           alt="Photo-gallery-3"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-3.jpg"
-          alt="Photo-gallery-4"
-          class="photo-gallery__img"
-        />
+        src="assets/Images/Photo-gallery-4.jpg"
+        alt="Photo-gallery-4"
+        class="photo-gallery__images__img"
+      />
         <img
-          src="/assets/Images/Photo-gallery-5.jpg"
+          src="assets/Images/Photo-gallery-5.jpg"
           alt="Photo-gallery-5"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-6.jpg"
+          src="assets/Images/Photo-gallery-6.jpg"
           alt="Photo-gallery-6"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-7.jpg"
+          src="assets/Images/Photo-gallery-7.jpg"
           alt="Photo-gallery-7"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-8.jpg"
+          src="assets/Images/Photo-gallery-8.jpg"
           alt="Photo-gallery-8"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
         <img
-          src="/assets/Images/Photo-gallery-9.jpg"
+          src="assets/Images/Photo-gallery-9.jpg"
           alt="Photo-gallery-9"
-          class="photo-gallery__img"
+          class="photo-gallery__images__img"
         />
       </article>
     </section>
-    <footer class="footer">
+    <footer class="footer"> 
       <section class="footer__contact">
         <h1 class="footer__contact__title">Get In Touch</h1>
 
+        <article class="footer__contact__social">
+          <a href="instagram.com" class="footer__contact__social__icon"> <img src="assets/Icons/SVG/Icon-instagram.svg" alt="instagram"></a>
+          <a href="facebook.com" class="footer__contact__social__icon"> <img src="assets/Icons/SVG/Icon-facebook.svg" alt="facebook"></a>
+          <a href="twitter.com" class="footer__contact__social__icon"> <img src="assets/Icons/SVG/Icon-twitter.svg" alt="twitter"></a>
+
+        </article>
+
         <article class="footer__contact__companies">
-          <div class="footer__contact__company">
-            <h2 class="footer__contact__company__name">
+          <div class="footer__contact__companies__company">
+            <h2 class="footer__contact__companies__company__name">
               The Bees Knees Management
             </h2>
-            <p class="footer__contact__company__details">
+            <p class="footer__contact__companies__company__details">
               503 Broadway Penthouse,
               <br />
-              New York, NY 10012, USA
-              <br />
-              <a
-                class="footer__contact__company__email"
+                            New York, NY 10012, USA
+            </p>
+            <a
+                class="footer__contact__companies__company__email"
                 href="mailto:info@thebeesknees.com"
               >
                 info@thebeesknees.com
-              </a>
-            </p>
+            </a>
           </div>
 
-          <div class="footer__contact__company">
-            <h2 class="footer__contact__company__name">
+          <div class="footer__contact__companies__company">
+            <h2 class="footer__contact__companies__company__name">
               Limitless Artist Group
             </h2>
-            <p class="footer__contact__company__details">
-              Booking Agent for
-              <br />
-              US / South America / Japan
-              <br />
-              <a
-                class="footer__contact__company__email"
-                href="mailto:bookings@limitlessag.com"
-              >
-                bookings@limitlessag.com
-              </a>
-            </p>
-          </div>
-          <div class="footer__contact__company">
-            <h2 class="footer__contact__company__name">ARCH Entertainment</h2>
-            <p class="footer__contact__company__details">
+            <p class="footer__contact__companies__company__details">
               Booking Agent for
               <br />
 
-              UK / EU / AU
-              <br />
-              <a
-                class="footer__contact__company__email"
-                href="mailto:bookings@limitlessag.com"
-              >
-                bookings@limitlessag.com
-              </a>
+            
+              US / South America / Japan
             </p>
+            <a
+              class="footer__contact__companies__company__email"
+              href="mailto:bookings@limitlessag.com"
+            >
+              bookings@limitlessag.com
+            </a>
+          </div>
+          <div class="footer__contact__companies__company">
+            <h2 class="footer__contact__companies__company__name">
+              ARCH Entertainment
+            </h2>
+            <p class="footer__contact__companies__company__details">
+              Booking Agent for
+              <br />
+       
+              UK / EU / AU
+            </p>
+            <a
+              class="footer__contact__companies__company__email"
+              href="mailto:bookings@limitlessag.com"
+            >
+              bookings@limitlessag.com
+            </a>
           </div>
         </article>
       </section>
-
+      <img  class="footer__logo" src="assets/Logo/Logo-bandsite.svg" alt="bandsite-logo"> 
       <section class="footer-copyright">
-        <h2 class="footer-copyright__title">BANDSITE</h2>
         <p class="footer-copyright__copy">
           Copyright The Bees Knees © 2023 All Rights Reserved
         </p>
