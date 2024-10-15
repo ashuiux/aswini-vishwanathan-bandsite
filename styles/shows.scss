@@ -1,0 +1,212 @@
+@use "partials/global" as *;
+@use "partials/variables" as *;
+@use "partials/mixins" as *;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $primary-color-black;
+    padding-top: $padding-s;
+    width: 100%;
+  
+    &__nav {
+      background-color: $primary-color-black;
+      margin: 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      width: 100%;
+  
+      @include tablet {
+        padding-left: $padding-m;
+      }
+  
+      @include mobile-body;
+    }
+  
+    &__list {
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;  
+  
+      @include tablet {
+        display: flex;
+      justify-content: flex-start;
+      }
+    }
+  
+    &__list-item {
+      width: 50%;
+      padding: $padding-s;
+      text-align: center;
+  
+      &--active {
+        @include mobile-subheader;
+        border-bottom: 5px solid $primary-color-white;
+      }
+  
+      &:hover,
+      &:active {
+        @include mobile-subheader;
+        border-bottom: 5px solid $primary-color-white;
+      }
+      @include tablet {
+      display: flex;
+      justify-content: center;
+      width: 30%;
+      }
+  
+    }
+  
+    &__link { 
+      color: $primary-color-white;
+      font-size: $mobile-section-header-font-size;
+      text-decoration: none;
+    }
+  
+    @include tablet {
+      @include page-header;
+      flex-direction: row;
+      padding-left: $padding-s;
+    }
+  
+    &__logo {
+      width: 14rem;
+      padding: $padding-s;
+    }
+
+  }
+  
+  
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(../assets/Images/hero-bio.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 200px;
+    max-height: 600px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: $padding-s;
+    color: $primary-color-white;
+  
+    &__title {
+      color: $primary-color-white;
+      padding-top: $padding-s;
+      padding-bottom: $padding-lg;
+      @include mobile-page-header;
+    }
+
+    iframe
+{
+    width: 80%;
+    @include tablet
+    {  width: 50%;
+    }
+}
+  }
+  
+
+  .footer {
+    background-color: $primary-color-black;
+    color: $primary-color-white;
+    padding: $padding-s;
+    display: flex;
+    flex-direction: column;
+    @include mobile-footer;
+  
+   &__article
+   {
+    display: flex;
+    flex-direction: column;
+  @include tablet
+  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+   }
+  
+    &__contact {
+      @include mobile-footer;
+    }
+    &__title {
+      @include section-header;
+      padding-bottom: $padding-s;
+    }
+    &__companies {
+      @include mobile-footer;
+  
+      @include tablet {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      }
+    
+      &__company {
+        @include mobile-footer;
+  
+        &-name {
+          @include mobile-footer;
+        }
+  
+        &-email {
+          color: $primary-color-white;
+          text-decoration: none;
+          @include mobile-footer;
+        }
+    }
+  
+    &__social {
+      width: 40%;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: $padding-s;
+  
+      @include tablet
+      {
+        width: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+    }
+    &__icon {
+      height: 2rem; 
+    }
+  
+    &__logo
+    {
+      width: 14rem;
+      visibility:hidden;
+      @include tablet
+      {
+        visibility:visible;
+      }
+    }
+  
+  
+    &__logo-mobile {
+      width: 14rem;
+      padding-top: $padding-s;
+      @include tablet
+      {
+        visibility:hidden;
+      }
+    }
+  
+    &__copyright {
+      @include mobile-footer;
+  
+      &__copy {
+        text-align: left;
+      }
+    }
+  }

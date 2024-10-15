@@ -25,3 +25,11 @@ footer {
 *::after {
   box-sizing: border-box;
 }   
+
+@font-face {
+  font-family: "Avenir Next";
+  src: url(/assets/Font/AvenirNextLTPro-Bold.otf);
+  src: url(/assets/Font/AvenirNextLTPro-Demi.otf);
+  src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
+}
+

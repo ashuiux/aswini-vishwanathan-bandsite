@@ -121,203 +121,27 @@ footer {
   max-height: 600px;
   height: 100vh;
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   padding: 24px;
+  color: #FFFFFF;
 }
 .hero__title {
   color: #FFFFFF;
+  padding-top: 24px;
+  padding-bottom: 64px;
   font-size: 3.75rem;
   line-height: 32px;
   font-weight: 700;
 }
-
-.about {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 24px;
-  text-align: center;
+.hero iframe {
+  width: 80%;
 }
 @media screen and (min-width: 768px) {
-  .about {
-    font-size: 44px;
-    line-height: 44px;
-    font-weight: 700;
-    justify-content: center;
-    align-items: center;
+  .hero iframe {
+    width: 50%;
   }
-}
-.about__title {
-  text-align: left;
-  font-size: 1.5rem;
-  line-height: 32px;
-  font-weight: 700;
-}
-@media screen and (min-width: 768px) {
-  .about__title {
-    font-size: 44px;
-    line-height: 44px;
-    font-weight: 700;
-    align-self: flex-start;
-    padding-bottom: 24px;
-  }
-}
-.about__img {
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .about__img {
-    justify-content: center;
-    width: 80%;
-  }
-}
-.about__quote {
-  text-align: left;
-  font-size: 1.25rem;
-  line-height: 22px;
-  font-weight: 700;
-  padding-top: 24px;
-  padding-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .about__quote {
-    font-size: 1.5rem;
-    line-height: 32px;
-    font-weight: 600;
-    width: 80%;
-  }
-}
-.about__subtitle {
-  text-align: left;
-  font-size: 1.25rem;
-  line-height: 22px;
-  font-weight: 700;
-  padding-top: 24px;
-  padding-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .about__subtitle {
-    font-size: 44px;
-    line-height: 44px;
-    font-weight: 700;
-    justify-content: center;
-    width: 80%;
-  }
-}
-.about__copy {
-  text-align: left;
-}
-@media screen and (min-width: 768px) {
-  .about__copy {
-    font-size: 0.875rem;
-    line-height: 22px;
-    font-weight: 400;
-    justify-content: center;
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
-.about__para {
-  font-size: 0.8125rem;
-  line-height: 1.125rem;
-  font-weight: 400;
-}
-@media screen and (min-width: 768px) {
-  .about__para {
-    font-size: 0.875rem;
-    line-height: 22px;
-    font-weight: 400;
-    width: 48%;
-  }
-}
-
-.photo-gallery {
-  padding: 24px;
-  background-color: #FAFAFA;
-}
-.photo-gallery__title {
-  font-size: 1.5rem;
-  line-height: 32px;
-  font-weight: 700;
-  text-align: left;
-  align-self: flex-start;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__title {
-    font-size: 44px;
-    line-height: 44px;
-    font-weight: 700;
-  }
-}
-.photo-gallery__images {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__images {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
-.photo-gallery__img {
-  width: 100%;
-  padding-top: 16px;
-  padding-bottom: 16px;
-}
-@media screen and (min-width: 768px) {
-  .photo-gallery__img {
-    width: 30%;
-  }
-}
-
-.comments {
-  display: flex;
-  flex-direction: column;
-}
-.comments__title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-.comments label {
-  color: #555;
-}
-.comments input, .comments textarea {
-  width: 100%;
-  border: 1px solid #E1E1E1;
-  border-radius: 6px;
-}
-.comments input::-moz-placeholder, .comments textarea::-moz-placeholder {
-  color: #aaa;
-}
-.comments input::placeholder, .comments textarea::placeholder {
-  color: #aaa;
-}
-.comments__button {
-  background-color: #333;
-  color: #fff;
-  padding: 12px 16px;
-  border: none;
-  border-radius: 6px;
-  font-size: 1rem;
-  cursor: pointer;
-  align-self: flex-end;
-}
-.comments__button:hover {
-  background-color: #555;
-}
-.comments__avatar {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
 .footer {
@@ -423,4 +247,4 @@ footer {
 }
 .footer__copyright__copy {
   text-align: left;
-}/*# sourceMappingURL=bio.css.map */
+}/*# sourceMappingURL=shows.css.map */
