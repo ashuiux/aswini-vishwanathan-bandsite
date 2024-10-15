@@ -27,7 +27,7 @@
 @mixin mobile-subheader {
   font-size: $mobile-subheader-font-size;
   line-height: $mobile-subheader-line-height;
-  font-weight: $font-weight-demi;
+  font-weight: $font-weight-bold;
   padding-top: $padding-s;
   padding-bottom: $padding-xs;
 }
