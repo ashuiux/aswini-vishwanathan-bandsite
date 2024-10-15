@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Band Site</title>
-    <link rel="stylesheet" href="styles/bio.css" />
+    <link rel="stylesheet" href="styles/bio.css">
   </head>
   <body>
     <header class="header">
@@ -21,7 +21,7 @@
             <a class="header__link" href="index.html">Biography</a>
           </li>
           <li class="header__list-item">
-            <a class="header__link" href="shows.html">Shows</a>
+            <a class="header__link" href="./pages/shows.html">Shows</a>
           </li>
         </ul>
       </nav>
@@ -113,6 +113,24 @@
         />
       </article>
     </section>
+    <section class="coments">
+      <h2 class="comments__title">Join the conversation</h2>
+      <form id="comment-form">
+        <label for="name">Name:</label><br />
+        <input type="text" id="name" required placeholder="Enter your name"/><br /><br />
+  
+        <label for="comment">Comment:</label><br />
+        <textarea id="comment" rows="4" placeholder="Add a new comment" ></textarea><br /><br />
+  
+        <button type="submit" class="comments__button">Submit Comment</button>
+      </form>
+
+      <div id="comments__container">
+   
+      </div>
+
+
+    </section>
     <footer class="footer">
       <section class="footer__contact">
         <article class="footer__article">
@@ -129,7 +147,7 @@
             <img src="assets/Icons/SVG/Icon-twitter.svg" class="footer__icon" alt="twitter"
           /></a>
         </div>
-        
+
         <a href="index.html"><img
           class="footer__logo"
           src="assets/Logo/Logo-bandsite.svg"
@@ -197,5 +215,6 @@
         </p>
       </section>
     </footer>
+    <script src="scripts/index-page.js"></script>
   </body>
 </html>
