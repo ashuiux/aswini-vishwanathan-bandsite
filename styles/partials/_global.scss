@@ -33,3 +33,17 @@ footer {
   src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
 }
 
+
+button {
+  background-color: $primary-color-black;
+  color: $primary-color-white;
+  padding: $padding-s;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+
+  &:hover {
+    background-color: $cta-hover-color;
+  }
+}
