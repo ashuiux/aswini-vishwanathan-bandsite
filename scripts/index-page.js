@@ -1,4 +1,3 @@
- // Array with 3 default comments
  const comments = [
     {
       name: "Victor Pinto",
