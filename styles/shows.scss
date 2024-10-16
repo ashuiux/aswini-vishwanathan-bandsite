@@ -82,7 +82,7 @@
   
   .hero {
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-      url(../assets/Images/hero-bio.jpg);
+      url(../assets/Images/Photo-gallery-3.jpg);
     background-size: cover;
     background-position: center;
     min-height: 200px;
@@ -110,7 +110,46 @@
     }
 }
   }
-  
+.shows
+{
+    margin: $mobile-page-header-line-height;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include tablet
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space;
+    }
+
+    &__title
+    {
+        padding-bottom: $padding-lg;
+    }
+}
+  .show-item
+  {
+    display: flex;
+    flex-direction: column;
+    @include tablet
+    {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+    border-top: 1px solid $secondary-color-mercury;
+    border-bottom: 1px solid $secondary-color-mercury;
+
+    h2,
+    p
+    {
+        padding-right: $padding-lg;
+        display: flex;
+        align-self: flex-start;
+    }
+  }
 
   .footer {
     background-color: $primary-color-black;

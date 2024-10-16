@@ -30,6 +30,19 @@ footer {
   src: url(/assets/Font/AvenirNextLTPro-Demi.otf);
   src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
 }
+button {
+  background-color: #323232;
+  color: #FFFFFF;
+  padding: 24px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+button:hover {
+  background-color: #000000;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -114,7 +127,7 @@ footer {
 }
 
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/hero-bio.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/Images/Photo-gallery-3.jpg);
   background-size: cover;
   background-position: center;
   min-height: 200px;
@@ -142,6 +155,43 @@ footer {
   .hero iframe {
     width: 50%;
   }
+}
+
+.shows {
+  margin: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .shows {
+    display: flex;
+    flex-direction: row;
+    justify-content: space;
+  }
+}
+.shows__title {
+  padding-bottom: 64px;
+}
+
+.show-item {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #E1E1E1;
+  border-bottom: 1px solid #E1E1E1;
+}
+@media screen and (min-width: 768px) {
+  .show-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.show-item h2,
+.show-item p {
+  padding-right: 64px;
+  display: flex;
+  align-self: flex-start;
 }
 
 .footer {
