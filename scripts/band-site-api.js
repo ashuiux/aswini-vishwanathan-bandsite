@@ -15,7 +15,6 @@ class BandSiteApi {
       return response.data;
     } catch (error) {
       console.error("Error posting comment: ", error);
-      throw error;
     }
   }
 
@@ -37,4 +36,15 @@ class BandSiteApi {
      
     }
   }
+  //trying delete function
+  async deleteComment(commentId) {
+    try {
+      const response = await axios.delete(`${this.baseUrl}/comments/${commentId}?api_key=${this.apiKey}`);
+      return response.data;
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
+  }
+  //trying delete function
+
 }

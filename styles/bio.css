@@ -385,6 +385,24 @@ body {
   color: #323232;
   margin: 0;
 }
+.comment__delete-button {
+  width: 100%;
+  padding: 24px;
+  background-color: #E1E1E1;
+  color: #323232;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.comment__delete-button:hover {
+  background-color: #000000;
+  color: #AFAFAF;
+}
+@media screen and (min-width: 768px) {
+  .comment__delete-button {
+    padding: 24px 64px;
+  }
+}
 
 .comment {
   flex-grow: 1;

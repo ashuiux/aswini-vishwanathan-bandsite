@@ -27,6 +27,22 @@ function renderComment(comment) {
   commentText.textContent = comment.comment;
   commentContentDiv.appendChild(commentText);
 
+//trying delete function
+  const deleteButton = document.createElement("button");
+  deleteButton.classList.add("comment__delete-button");
+  deleteButton.textContent = "Delete";
+  deleteButton.addEventListener("click", async function () {
+    try {
+      await api.deleteComment(comment.id); 
+      commentDiv.remove(); 
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+      alert("There was an error deleting this comment. Please try again later.");
+    }
+  });
+  commentContentDiv.appendChild(deleteButton);
+//trying delete function
+
   commentDiv.appendChild(commentContentDiv);
 
   commentContainer.prepend(commentDiv);
