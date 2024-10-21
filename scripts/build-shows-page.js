@@ -1,82 +1,60 @@
-const shows = [
-    {
-        date: "2024-10-15",
-        title: "Ronald Lane",
-        location: "Sanfransico, CA",
+const api = new BandSiteApi();
 
-    },
-    {
-        date: "2024-10-18",
-        title: "Pier 3 East",
-        location: "Sanfransico, CA",
-    
-    },
-    {
-        date: "2024-10-20",
-        title: "View Lounge",
-        location: "Sanfransico, CA",
+async function renderShows() {
+  const showTableBody = document.querySelector(".shows__body");
+  showTableBody.innerHTML = "";
+  try {
+    const shows = await api.getShows();
 
-    },
-    {
-        date: "2024-10-20",
-        title: "Hyatt Agency",
-        location: "Sanfransico, CA",
+    shows.forEach((show) => {
+      const showRow = document.createElement("tr");
+      showRow.classList.add("shows__row");
 
-    },
-    {
-        date: "2024-10-20",
-        title: "Moscow Center",
-        location: "Sanfransico, CA",
-      
-    },
-    {
-        date: "2024-10-20",
-        title: "Press Club",
-        location: "Sanfransico, CA",
-    
-    },
-];
+      const dateHeader = document.createElement("th");
+      dateHeader.classList.add("shows__header", "shows__header--mobile");
+      dateHeader.textContent = "Date";
+      const dateData = document.createElement("td");
+      dateData.classList.add("shows__data", "shows__data--date");
+      dateData.textContent = new Date(show.date).toDateString();
 
-function renderShows() {
-    const showList = document.getElementById("show__list");
-    shows.forEach(show => {
-        const showItem = document.createElement("div");
-        showItem.classList.add("show-item");
+      const venueHeader = document.createElement("th");
+      venueHeader.classList.add("shows__header", "shows__header--mobile");
+      venueHeader.textContent = "Venue";
+      const venueData = document.createElement("td");
+      venueData.classList.add("shows__data");
+      venueData.textContent = show.place;
 
-        const title = document.createElement("h2");
-        title.textContent = show.title;
+      const locationHeader = document.createElement("th");
+      locationHeader.classList.add("shows__header", "shows__header--mobile");
+      locationHeader.textContent = "Location";
+      const locationData = document.createElement("td");
+      locationData.classList.add("shows__data");
+      locationData.textContent = show.location;
 
-        const date = document.createElement("p");
-        date.textContent = `Date: ${show.date}`;
- 
-        const location = document.createElement("h2");
-        location.textContent = show.location;
-       
-        const button = document.createElement('button');
-        button.textContent = 'BUY TICKETS';
-        button.addEventListener('click', () => {
-            alert(`Your show is booked: ${show.title}`);
-        });
+      const actionCell = document.createElement("td");
+      actionCell.classList.add("shows__action");
+      const button = document.createElement("button");
+      button.classList.add("shows__button", "button");
+      button.textContent = "Buy Tickets";
+      button.addEventListener("click", () => {
+        alert(`Your show is booked: ${show.place} - ${show.location}`);
+      });
 
-        showItem.appendChild(date);
-        showItem.appendChild(title);
-        showItem.appendChild(location);
-        showItem.appendChild(button);
+      actionCell.appendChild(button);
 
-        addHoverAndClickEvents(showItem);
+      showRow.appendChild(dateHeader);
+      showRow.appendChild(dateData);
+      showRow.appendChild(venueHeader);
+      showRow.appendChild(venueData);
+      showRow.appendChild(locationHeader);
+      showRow.appendChild(locationData);
+      showRow.appendChild(actionCell);
 
-        showList.appendChild(showItem);
+      showTableBody.appendChild(showRow);
     });
+  } catch (error) {
+    console.error("Error rendering shows:", error);
+  }
 }
 
 renderShows();
-
-function addHoverAndClickEvents(showItem) {
-    showItem.addEventListener("click", () => {
-        document.querySelectorAll(".show-item").forEach(item => {
-            item.classList.remove("selected");
-        });
-
-        showItem.classList.add("selected");
-    });
-}

@@ -16,12 +16,15 @@
   font-size: $mobile-page-header-font-size;
   line-height: $mobile-page-header-line-height;
   font-weight: $font-weight-bold;
+  font-family: $font-family;
 }
 
 @mixin mobile-section-header {
   font-size: $mobile-section-header-font-size;
   line-height: $mobile-section-header-line-height;
   font-weight: $font-weight-bold;
+  font-family: $font-family;
+
 }
 
 @mixin mobile-subheader {
@@ -30,60 +33,80 @@
   font-weight: $font-weight-bold;
   padding-top: $padding-s;
   padding-bottom: $padding-xs;
+  font-family: $font-family;
+
 }
 
 @mixin mobile-body {
   font-size: $mobile-body-font-size;
   line-height: $mobile-body-line-height;
   font-weight: $font-weight-regular;
+  font-family: $font-family;
+
 }
 
 @mixin mobile-footer {
   font-size: $mobile-footer-font-size;
   line-height: $mobile-footer-line-height;
   font-weight: $font-weight-regular;
+  font-family: $font-family;
+
 }
 
 @mixin mobile-button-label {
-  font-size: $mobile-button-label-font-size;
-  line-height: $mobile-button-label-line-height;
+  font-size: $mobile-label-button-font-size;
+  line-height: $mobile-label-button-line-height;
   font-weight: $font-weight-bold;
+  font-family: $font-family;
+
 }
 
 @mixin page-header {
   font-size: $page-header-font-size;
   line-height: $page-header-line-height;
   font-weight: $font-weight-bold;
+  font-family: $font-family;
+
 }
 
 @mixin section-header {
   font-size: $section-header-font-size;
   line-height: $section-header-line-height;
   font-weight: $font-weight-bold;
+  font-family: $font-family;
+
 }
 
 @mixin subheader {
   font-size: $subheader-font-size;
   line-height: $subheader-line-height;
   font-weight: $font-weight-demi;
+  font-family: $font-family;
+
 }
 
 @mixin body {
   font-size: $body-font-size;
   line-height: $body-line-height;
   font-weight: $font-weight-regular;
+  font-family: $font-family;
+
 }
 
 @mixin footer {
   font-size: $footer-font-size;
   line-height: $footer-line-height;
   font-weight: $font-weight-regular; 
+  font-family: $font-family;
+
 }
 
 @mixin button-label {
-  font-size: $button-label-font-size;
-  line-height: $button-label-line-height;
+  font-size: $label-button-font-size;
+  line-height: $label-button-line-height;
   font-weight: $font-weight-bold;
+  font-family: $font-family;
+
 }
 
 
