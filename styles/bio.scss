@@ -29,11 +29,11 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-    list-style-type: none;  
+    list-style-type: none;
 
     @include tablet {
       display: flex;
-    justify-content: flex-start;
+      justify-content: flex-start;
     }
   }
 
@@ -53,14 +53,13 @@
       border-bottom: 5px solid $primary-color-white;
     }
     @include tablet {
-    display: flex;
-    justify-content: center;
-    width: 30%;
+      display: flex;
+      justify-content: center;
+      width: 30%;
     }
-
   }
 
-  &__link { 
+  &__link {
     color: $primary-color-white;
     font-size: $mobile-section-header-font-size;
     text-decoration: none;
@@ -77,7 +76,6 @@
     padding: $padding-s;
   }
 }
-
 
 .hero {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
@@ -148,13 +146,11 @@
       @include section-header;
       justify-content: center;
       width: 80%;
-      
     }
   }
 
   &__copy {
     text-align: left;
-
 
     @include tablet {
       @include body;
@@ -172,7 +168,7 @@
     @include tablet {
       @include body;
       width: 48%;
-          }
+    }
   }
 }
 
@@ -215,50 +211,154 @@
   }
 }
 
-.comments
-{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: $margin-mobile-body;
-  @include mobile-section-header;
+.comment__section {
+  padding: $padding-m;
 
-
-  &__title
-  {
-    display: flex;
-    align-self: flex-start; 
-    padding-bottom: $padding-s;
-
-  }
-  &__form
-  {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  &__title {
+    font-family: $font-family;
+    font-weight: $font-weight-bold;
+    margin-bottom: 36px;
+    color: $primary-color-black;
   }
 
-  &__container
-  {
-    width: 80%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    @include mobile-subheader;
+  &__container {
+    margin-top: 36px;
   }
 }
 
 .comment {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-border-top: 1px solid $secondary-color-mercury;
-border-bottom: 1px solid $secondary-color-mercury;
-padding-top: $padding-s;
+  flex-direction: row;
+  gap: 32px;
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 800px;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 0;
+  }
+
+  &__avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: $secondary-color-mercury;
+    margin-right: 1.5rem;
+  }
+
+  &__timestamp
+{
+  font-family: $font-family;
+  font-size: $footer-font-size;
+  color: $secondary-color-silver;
+  margin: 0;
+  
+}
+
+&__post
+{
+  display: flex;
+  flex-direction: row;
+
+}
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    border-bottom: 1px solid $secondary-color-mercury;
 
 
+
+    &-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h3 {
+        font-family: $font-family;
+        font-size: $subheader-font-size;
+        font-weight: 600;
+        color: $primary-color-black;
+        margin: 0;
+      }
+
+    }
+
+    &-text {
+      font-family: $font-family;
+      font-size: $body-font-size;
+      line-height: 1.5;
+      color: $primary-color-black;
+      margin: 0;
+    }
+  }
+}
+
+.comment {
+  flex-grow: 1;
+
+  &__title {
+    @include mobile-section-header;
+    margin-bottom: $padding-m;  
+    @include tablet {
+      @include section-header;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+  }
+
+  &__label {
+    @include button-label;
+    color: $secondary-color-silver;
+  }
+
+  &__input,
+  &__textarea {
+    @include mobile-body;
+    width: 100%;
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid $secondary-color-mercury;
+
+    background-color: $secondary-color-alabaster;
+
+    &:focus {
+      border-color: $primary-color-black;
+      outline: none;
+    }
+    &:active {
+      border-color: $cta-hover-color;
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  &__button {
+    background-color: $primary-color-black;
+    color: $primary-color-white;
+    border: none;
+    padding: 12px 32px;
+    font-weight: $font-weight-bold;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($cta-hover-color, 10%);
+    }
+  }
 }
 
 .footer {
@@ -269,18 +369,15 @@ padding-top: $padding-s;
   flex-direction: column;
   @include mobile-footer;
 
- &__article
- {
-  display: flex;
-  flex-direction: column;
-@include tablet
-{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
-
- }
+  &__article {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
 
   &__contact {
     @include mobile-footer;
@@ -297,20 +394,20 @@ padding-top: $padding-s;
       flex-direction: row;
       justify-content: space-between;
     }
-    }
-  
-    &__company {
+  }
+
+  &__company {
+    @include mobile-footer;
+
+    &-name {
       @include mobile-footer;
+    }
 
-      &-name {
-        @include mobile-footer;
-      }
-
-      &-email {
-        color: $primary-color-white;
-        text-decoration: none;
-        @include mobile-footer;
-      }
+    &-email {
+      color: $primary-color-white;
+      text-decoration: none;
+      @include mobile-footer;
+    }
   }
 
   &__social {
@@ -319,8 +416,7 @@ padding-top: $padding-s;
     justify-content: space-between;
     padding-bottom: $padding-s;
 
-    @include tablet
-    {
+    @include tablet {
       width: 20%;
       display: flex;
       align-items: center;
@@ -328,26 +424,22 @@ padding-top: $padding-s;
     }
   }
   &__icon {
-    height: 2rem; 
+    height: 2rem;
   }
 
-  &__logo
-  {
+  &__logo {
     width: 14rem;
-    visibility:hidden;
-    @include tablet
-    {
-      visibility:visible;
+    visibility: hidden;
+    @include tablet {
+      visibility: visible;
     }
   }
-
 
   &__logo-mobile {
     width: 14rem;
     padding-top: $padding-s;
-    @include tablet
-    {
-      visibility:hidden;
+    @include tablet {
+      visibility: hidden;
     }
   }
 

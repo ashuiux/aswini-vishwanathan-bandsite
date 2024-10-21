@@ -15,7 +15,6 @@ li,
 footer {
   margin: 0;
   padding: 0;
-  font-family: "Avenir Next", sans-serif;
 }
 
 *,
@@ -30,17 +29,26 @@ footer {
   src: url(/assets/Font/AvenirNextLTPro-Demi.otf);
   src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
 }
-button {
+body {
+  font-family: "Avenir Next", sans-serif;
+}
+
+.button {
+  width: 100%;
+  padding: 24px;
   background-color: #323232;
   color: #FFFFFF;
-  padding: 24px;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  align-self: flex-end;
+  transition: background-color 0.3s ease;
 }
-button:hover {
+.button:hover {
   background-color: #000000;
+}
+@media screen and (min-width: 768px) {
+  .button {
+    padding: 24px 64px;
+  }
 }
 
 .header {
@@ -58,9 +66,10 @@ button:hover {
   flex-direction: row;
   justify-content: space-around;
   width: 100%;
-  font-size: 0.8125rem;
+  font-size: 1rem;
   line-height: 1.125rem;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .header__nav {
@@ -90,6 +99,7 @@ button:hover {
   font-weight: 700;
   padding-top: 24px;
   padding-bottom: 16px;
+  font-family: "Avenir Next", sans-serif;
   border-bottom: 5px solid #FFFFFF;
 }
 .header__list-item:hover, .header__list-item:active {
@@ -98,6 +108,7 @@ button:hover {
   font-weight: 700;
   padding-top: 24px;
   padding-bottom: 16px;
+  font-family: "Avenir Next", sans-serif;
   border-bottom: 5px solid #FFFFFF;
 }
 @media screen and (min-width: 768px) {
@@ -117,6 +128,7 @@ button:hover {
     font-size: 3.75rem;
     line-height: 4.25rem;
     font-weight: 700;
+    font-family: "Avenir Next", sans-serif;
     flex-direction: row;
     padding-left: 24px;
   }
@@ -143,6 +155,7 @@ button:hover {
   font-size: 3.75rem;
   line-height: 32px;
   font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
 }
 
 .about {
@@ -157,6 +170,7 @@ button:hover {
     font-size: 44px;
     line-height: 44px;
     font-weight: 700;
+    font-family: "Avenir Next", sans-serif;
     justify-content: center;
     align-items: center;
   }
@@ -166,12 +180,14 @@ button:hover {
   font-size: 1.5rem;
   line-height: 32px;
   font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about__title {
     font-size: 44px;
     line-height: 44px;
     font-weight: 700;
+    font-family: "Avenir Next", sans-serif;
     align-self: flex-start;
     padding-bottom: 24px;
   }
@@ -192,12 +208,14 @@ button:hover {
   font-weight: 700;
   padding-top: 24px;
   padding-bottom: 16px;
+  font-family: "Avenir Next", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about__quote {
     font-size: 1.5rem;
     line-height: 32px;
     font-weight: 600;
+    font-family: "Avenir Next", sans-serif;
     width: 80%;
   }
 }
@@ -208,12 +226,14 @@ button:hover {
   font-weight: 700;
   padding-top: 24px;
   padding-bottom: 16px;
+  font-family: "Avenir Next", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about__subtitle {
     font-size: 44px;
     line-height: 44px;
     font-weight: 700;
+    font-family: "Avenir Next", sans-serif;
     justify-content: center;
     width: 80%;
   }
@@ -223,9 +243,10 @@ button:hover {
 }
 @media screen and (min-width: 768px) {
   .about__copy {
-    font-size: 0.875rem;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 32px;
     font-weight: 400;
+    font-family: "Avenir Next", sans-serif;
     justify-content: center;
     width: 80%;
     display: flex;
@@ -234,15 +255,17 @@ button:hover {
   }
 }
 .about__para {
-  font-size: 0.8125rem;
+  font-size: 1rem;
   line-height: 1.125rem;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .about__para {
-    font-size: 0.875rem;
-    line-height: 22px;
+    font-size: 1rem;
+    line-height: 32px;
     font-weight: 400;
+    font-family: "Avenir Next", sans-serif;
     width: 48%;
   }
 }
@@ -255,6 +278,7 @@ button:hover {
   font-size: 1.5rem;
   line-height: 32px;
   font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
   text-align: left;
   align-self: flex-start;
 }
@@ -263,6 +287,7 @@ button:hover {
     font-size: 44px;
     line-height: 44px;
     font-weight: 700;
+    font-family: "Avenir Next", sans-serif;
   }
 }
 .photo-gallery__images {
@@ -290,46 +315,141 @@ button:hover {
   }
 }
 
-.comments {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 1rem;
-  font-size: 1.5rem;
-  line-height: 32px;
+.comment__section {
+  padding: 48px;
+}
+.comment__section__title {
+  font-family: "Avenir Next", sans-serif;
   font-weight: 700;
+  margin-bottom: 36px;
+  color: #323232;
 }
-.comments__title {
-  display: flex;
-  align-self: flex-start;
-  padding-bottom: 24px;
-}
-.comments__form {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.comments__container {
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.25rem;
-  line-height: 22px;
-  font-weight: 700;
-  padding-top: 24px;
-  padding-bottom: 16px;
+.comment__section__container {
+  margin-top: 36px;
 }
 
 .comment {
   display: flex;
+  flex-direction: row;
+  gap: 32px;
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 800px;
+}
+.comment__container {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-top: 1px solid #E1E1E1;
+  gap: 16px;
+  padding: 16px 0;
+}
+.comment__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+  margin-right: 1.5rem;
+}
+.comment__timestamp {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 0.75rem;
+  color: #AFAFAF;
+  margin: 0;
+}
+.comment__post {
+  display: flex;
+  flex-direction: row;
+}
+.comment__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
   border-bottom: 1px solid #E1E1E1;
-  padding-top: 24px;
+}
+.comment__content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.comment__content-header h3 {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #323232;
+  margin: 0;
+}
+.comment__content-text {
+  font-family: "Avenir Next", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #323232;
+  margin: 0;
+}
+
+.comment {
+  flex-grow: 1;
+}
+.comment__title {
+  font-size: 1.5rem;
+  line-height: 32px;
+  font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
+  margin-bottom: 48px;
+}
+@media screen and (min-width: 768px) {
+  .comment__title {
+    font-size: 44px;
+    line-height: 44px;
+    font-weight: 700;
+    font-family: "Avenir Next", sans-serif;
+  }
+}
+.comment__form {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+}
+.comment__label {
+  font-size: 0.75rem;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
+  color: #AFAFAF;
+}
+.comment__input, .comment__textarea {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  border: 1px solid #E1E1E1;
+  background-color: #FAFAFA;
+}
+.comment__input:focus, .comment__textarea:focus {
+  border-color: #323232;
+  outline: none;
+}
+.comment__input:active, .comment__textarea:active {
+  border-color: #000000;
+  outline: none;
+}
+.comment__textarea {
+  resize: none;
+}
+.comment__button {
+  background-color: #323232;
+  color: #FFFFFF;
+  border: none;
+  padding: 12px 32px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.comment__button:hover {
+  background-color: black;
 }
 
 .footer {
@@ -338,9 +458,10 @@ button:hover {
   padding: 24px;
   display: flex;
   flex-direction: column;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 .footer__article {
   display: flex;
@@ -354,20 +475,23 @@ button:hover {
   }
 }
 .footer__contact {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 .footer__title {
   font-size: 44px;
   line-height: 44px;
   font-weight: 700;
+  font-family: "Avenir Next", sans-serif;
   padding-bottom: 24px;
 }
 .footer__companies {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 @media screen and (min-width: 768px) {
   .footer__companies {
@@ -377,21 +501,24 @@ button:hover {
   }
 }
 .footer__company {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 .footer__company-name {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 .footer__company-email {
   color: #FFFFFF;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 .footer__social {
   width: 40%;
@@ -429,9 +556,10 @@ button:hover {
   }
 }
 .footer__copyright {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 24px;
   font-weight: 400;
+  font-family: "Avenir Next", sans-serif;
 }
 .footer__copyright__copy {
   text-align: left;

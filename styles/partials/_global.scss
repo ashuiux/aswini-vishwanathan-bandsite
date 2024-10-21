@@ -1,4 +1,5 @@
 @use "variables" as *;
+@use "mixins" as *;
 
 html,
 body,
@@ -17,14 +18,13 @@ li,
 footer {
   margin: 0;
   padding: 0;
-  font-family: $font-family;
 }
 
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-}   
+}
 
 @font-face {
   font-family: "Avenir Next";
@@ -33,17 +33,23 @@ footer {
   src: url(/assets/Font/AvenirNextLTPro-Regular.otf);
 }
 
+body {
+  font-family: $font-family;
+}
 
-button {
+.button {
+  width: 100%;
+  padding: $padding-s;
   background-color: $primary-color-black;
   color: $primary-color-white;
-  padding: $padding-s;
-  border-radius: 6px;
-  font-size: 1rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  align-self: flex-end;
+  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: $cta-hover-color;
+  }
+  @include tablet {
+    padding: $padding-s $padding-lg;
   }
 }
